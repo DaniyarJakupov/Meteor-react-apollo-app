@@ -6,6 +6,7 @@ type User {
 
 type Query {
   getUser: User
+  getResolutions: [Resolution]
 }
 
 schema {
