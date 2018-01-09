@@ -17,9 +17,9 @@ class App extends Component {
     }
     return (
       <div>
-        <h2>
-          {data.getUser.username} - {data.getUser.email}
-        </h2>
+        <h2>{data.getUser.username}</h2>
+
+        <ul>{data.getResolutions.map(res => <li key={res._id}>{res.name}</li>)}</ul>
       </div>
     );
   }
@@ -30,6 +30,10 @@ const GET_USER_QUERY = gql`
     getUser {
       username
       email
+    }
+    getResolutions {
+      _id
+      name
     }
   }
 `;
