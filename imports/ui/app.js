@@ -17,20 +17,14 @@ class App extends Component {
     }
     return (
       <div>
-        <h2>{data.getUser.username}</h2>
-
         <ul>{data.getResolutions.map(res => <li key={res._id}>{res.name}</li>)}</ul>
       </div>
     );
   }
 }
 
-const GET_USER_QUERY = gql`
+const GET_RESOLUTIONS_QUERY = gql`
   {
-    getUser {
-      username
-      email
-    }
     getResolutions {
       _id
       name
@@ -38,4 +32,4 @@ const GET_USER_QUERY = gql`
   }
 `;
 
-export default graphql(GET_USER_QUERY)(App);
+export default graphql(GET_RESOLUTIONS_QUERY)(App);

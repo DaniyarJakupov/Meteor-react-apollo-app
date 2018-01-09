@@ -1,9 +1,7 @@
-import UserResolver from './user-resolver';
-import ResolutionsResolver from './resolutions-resolver';
+import ResolutionResolver from './resolution-resolver';
 
 export default {
   Query: {
-    getUser: UserResolver.getUser,
-    getResolutions: ResolutionsResolver.getResolutions,
+    getResolutions: ResolutionResolver.getResolutions,
   },
 };
