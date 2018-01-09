@@ -4,4 +4,7 @@ export default {
   Query: {
     getResolutions: ResolutionResolver.getResolutions,
   },
+  Mutation: {
+    createResolution: ResolutionResolver.createResolution,
+  },
 };
