@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
+import Form from './Form';
+
 class App extends Component {
   state = {};
 
@@ -17,7 +19,9 @@ class App extends Component {
     }
     return (
       <div>
-        <ul>{data.getResolutions.map(res => <li key={res._id}>{res.name}</li>)}</ul>
+        <ul>{data.getResolutions.map(res => <li key={res._id}>{res.name || res._id}</li>)}</ul>
+
+        <Form refetch={data.refetch} />
       </div>
     );
   }
