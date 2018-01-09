@@ -1,6 +1,9 @@
+import Resolutions from '../../collections/resolutions';
+
+// Resolutions.insert({
+//   name: 'Find a job',
+// });
+
 export default {
-  getResolutions: () => [
-    { _id: 'sadasda', name: 'Keep learning' },
-    { _id: 'mkfmewk', name: 'Find a job' },
-  ],
+  getResolutions: () => Resolutions.find({}).fetch(),
 };
