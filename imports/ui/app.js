@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 
 import ResolutionForm from './ResolutionForm';
 import RegisterForm from './RegisterForm';
+import LoginForm from './LoginForm';
 
 class App extends Component {
   state = {};
@@ -24,6 +25,9 @@ class App extends Component {
 
         <h2>Register:</h2>
         <RegisterForm />
+
+        <h2>Login:</h2>
+        <LoginForm />
 
         <h2>Your resolutions:</h2>
         <ResolutionForm />
