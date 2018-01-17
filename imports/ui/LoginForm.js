@@ -21,6 +21,8 @@ class LoginForm extends Component {
     } catch (error) {
       throw error;
     }
+    // to check, logout first: Meteor.logout()
+    // then enter in console: Meteor.userId()
   };
 
   render() {

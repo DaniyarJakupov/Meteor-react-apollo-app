@@ -25,6 +25,7 @@ class RegisterForm extends Component {
     } catch (error) {
       throw error;
     }
+    // to check, enter in console Meteor.userId()
   };
 
   render() {
