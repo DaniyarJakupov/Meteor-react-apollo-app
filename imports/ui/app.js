@@ -21,14 +21,14 @@ class App extends Component {
       <div>
         <ul>{data.getResolutions.map(res => <li key={res._id}>{res.name || res._id}</li>)}</ul>
 
-        <Form refetch={data.refetch} />
+        <Form />
       </div>
     );
   }
 }
 
 const GET_RESOLUTIONS_QUERY = gql`
-  {
+  query GetResolutions {
     getResolutions {
       _id
       name
