@@ -3,6 +3,8 @@ import Resolutions from '../../collections/resolutions';
 // Resolutions.insert({
 //   name: 'Find a job',
 // });
+
+// Drop collection
 // Resolutions.remove({});
 
 export default {
