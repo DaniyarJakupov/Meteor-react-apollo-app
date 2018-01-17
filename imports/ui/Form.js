@@ -14,13 +14,12 @@ class Form extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const { data } = await this.props.mutate({
         variables: { name: this.state.value },
+        refetchQueries: ['GetResolutions'],
       });
 
-      this.props.refetch();
       this.setState({ value: '' });
     } catch (error) {
       throw error;
@@ -30,10 +29,8 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
+
         <input type="submit" value="Submit" />
       </form>
     );
