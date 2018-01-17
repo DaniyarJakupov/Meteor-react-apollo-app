@@ -3,6 +3,7 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
 import ResolutionForm from './ResolutionForm';
+import RegisterForm from './RegisterForm';
 
 class App extends Component {
   state = {};
@@ -21,6 +22,10 @@ class App extends Component {
       <div>
         <ul>{data.getResolutions.map(res => <li key={res._id}>{res.name || res._id}</li>)}</ul>
 
+        <h2>Register:</h2>
+        <RegisterForm />
+
+        <h2>Your resolutions:</h2>
         <ResolutionForm />
       </div>
     );
