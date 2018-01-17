@@ -14,15 +14,14 @@ class Form extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('value', this.state.value);
 
     try {
       const { data } = await this.props.mutate({
         variables: { name: this.state.value },
       });
 
-      console.log('data', data.createResolution);
       this.props.refetch();
+      this.setState({ value: '' });
     } catch (error) {
       throw error;
     }
