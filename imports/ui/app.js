@@ -29,6 +29,8 @@ class App extends Component {
         <h2>Login:</h2>
         <LoginForm />
 
+        <button onClick={() => Meteor.logout()}>Logout</button>
+
         <h2>Your resolutions:</h2>
         <ResolutionForm />
       </div>
