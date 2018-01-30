@@ -8,7 +8,7 @@ import Resolutions from '../../collections/resolutions';
 // Resolutions.remove({});
 
 export default {
-  getResolutions: () => Resolutions.find({}).fetch(),
+  getResolutions: (obj, args, { userId }) => Resolutions.find({}).fetch(),
 
   createResolution: async (_, args) => {
     try {
